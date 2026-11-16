@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="ELO conecta pessoas que desejam doar roupas a quem precisa.">
+  <title>ELO - Moda que conecta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="ELO, início">ELO<span>.</span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav id="main-nav" aria-label="Navegação principal">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#doar">Doar</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#impacto">Impacto</a>
+      <a href="#conta">Cadastro / Login</a>
+      <a href="#painel">Painel</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section hero" id="inicio">
+      <div>
+        <p class="eyebrow">ELO • MODA CIRCULAR</p>
+        <h1>Vista um novo<br><em>propósito.</em></h1>
+        <p class="lead">Conectamos pessoas que desejam doar roupas a quem precisa. Uma experiência acolhedora, elegante e simples para fazer a solidariedade circular.</p>
+        <div class="actions">
+          <a class="btn primary" href="#doar">Quero doar ↗</a>
+          <a class="btn outline" href="#catalogo">Encontrar roupas</a>
+        </div>
+      </div>
+      <div class="hero-mark" aria-label="ELO Moda que conecta">
+        <div class="hanger">⌒<span>✿</span></div>
+        <strong>ELO</strong>
+        <em>Moda que conecta</em>
+        <small>DOE • RECEBA • TRANSFORME</small>
+      </div>
+    </section>
+
+    <section class="section how" id="como-funciona">
+      <div class="center">
+        <p class="eyebrow">UM CAMINHO SIMPLES</p>
+        <h2>Três passos.<br><em>Muitas possibilidades.</em></h2>
+      </div>
+      <div class="steps">
+        <article><small>01</small><h3>Você compartilha</h3><p>Cadastre roupas limpas e em bom estado.</p></article>
+        <article><small>02</small><h3>Alguém encontra</h3><p>Pessoas procuram peças por tamanho e categoria.</p></article>
+        <article><small>03</small><h3>A roupa ganha vida</h3><p>Uma peça parada pode fazer parte de uma nova história.</p></article>
+      </div>
+    </section>
+
+    <section class="section donate" id="doar">
+      <div>
+        <p class="eyebrow">PARA QUEM QUER DOAR</p>
+        <h2>Seu armário pode<br>abrir novos caminhos.</h2>
+        <p>Doe roupas em bom estado e ajude a construir uma comunidade mais solidária.</p>
+        <ul class="ticks">
+          <li>Cadastro demonstrativo disponível</li>
+          <li>Sem exposição pública de dados pessoais</li>
+          <li>Projeto escolar de moda circular</li>
+        </ul>
+      </div>
+      <form class="panel-form" id="donation-form">
+        <p class="eyebrow">SIMULAÇÃO DE DOAÇÃO</p>
+        <h3>Vamos começar?</h3>
+        <label>Seu nome (ou nome fictício)
+          <input name="donor" type="text" placeholder="Ex.: Maria" required maxlength="60">
+        </label>
+        <div class="two">
+          <label>Tipo de peça
+            <select name="category" required>
+              <option value="">Selecione</option><option>Blusas</option><option>Calças</option><option>Casacos</option><option>Vestidos</option><option>Calçados</option><option>Outros</option>
+            </select>
+          </label>
+          <label>Tamanho
+            <select name="size" required>
+              <option value="">Selecione</option><option>PP</option><option>P</option><option>M</option><option>G</option><option>GG</option><option>Único</option><option>Infantil</option>
+            </select>
+          </label>
+        </div>
+        <div class="two">
+          <label>Estado da peça
+            <select name="condition" required>
+              <option value="">Selecione</option><option>Como nova</option><option>Bom estado</option>
+            </select>
+          </label>
+          <label>Quantidade
+            <input name="quantity" type="number" min="1" max="99" value="1" required>
+          </label>
+        </div>
+        <label>Região / bairro (opcional)
+          <input name="region" type="text" placeholder="Ex.: Centro" maxlength="80">
+        </label>
+        <label>Descrição (opcional)
+          <textarea name="description" rows="3" placeholder="Descreva a peça" maxlength="240"></textarea>
+        </label>
+        <button class="btn primary full" type="submit">Cadastrar doação ↗</button>
+        <p class="fine">Não doe peças sujas ou danificadas. Combine a entrega com a organização responsável.</p>
+      </form>
+    </section>
+
+    <section class="section catalog" id="catalogo">
+      <p class="eyebrow">PARA QUEM ESTÁ PROCURANDO</p>
+      <h2>Encontre o que<br><em>faz falta agora.</em></h2>
+      <p class="lead">Catálogo ilustrativo de roupas disponíveis.</p>
+      <div class="filters">
+        <input id="search" type="search" placeholder="⌕ Buscar roupas..." aria-label="Buscar roupas">
+        <select id="category-filter" aria-label="Filtrar por categoria"><option value="">Todas as categorias</option><option>Blusas</option><option>Calças</option><option>Casacos</option><option>Vestidos</option><option>Calçados</option><option>Outros</option></select>
+        <select id="size-filter" aria-label="Filtrar por tamanho"><option value="">Todos os tamanhos</option><option>PP</option><option>P</option><option>M</option><option>G</option><option>GG</option><option>Único</option><option>Infantil</option></select>
+      </div>
+      <div class="catalog-grid" id="catalog-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state">Ainda não há peças cadastradas. Seja a primeira pessoa a doar!</p>
+    </section>
+
+    <section class="section impact" id="impacto">
+      <div class="center">
+        <p class="eyebrow">SOLIDARIEDADE EM MOVIMENTO</p>
+        <h2>Cada peça conta uma história.</h2>
+      </div>
+      <div class="stats">
+        <div><strong id="donation-count">0</strong><span>doações cadastradas</span></div>
+        <div><strong id="piece-count">0</strong><span>peças compartilhadas</span></div>
+        <div><strong id="available-count">0</strong><span>peças disponíveis</span></div>
+      </div>
+      <p class="fine center">Na demonstração, os números são fictícios e armazenados neste navegador. Na versão real, serão calculados com dados autorizados da organização.</p>
+    </section>
+
+    <section class="section account" id="conta">
+      <div class="center">
+        <p class="eyebrow">FAÇA PARTE DO ELO</p>
+        <h2>Entre nessa <em>conexão.</em></h2>
+        <p class="lead centered">Crie uma conta ou entre com seu cadastro.</p>
+      </div>
+      <div class="account-grid">
+        <form class="account-form" id="signup-form">
+          <p class="eyebrow">NOVO POR AQUI?</p><h3>Cadastro</h3>
+          <label>Nome<input name="name" type="text" placeholder="Seu nome" required maxlength="80"></label>
+          <label>E-mail<input name="email" type="email" placeholder="voce@email.com" required></label>
+          <label>Senha<input name="password" type="password" placeholder="Mínimo de 8 caracteres" minlength="8" required></label>
+          <button class="btn primary" type="submit">Criar conta ↗</button>
+        </form>
+        <form class="account-form" id="login-form">
+          <p class="eyebrow">BEM-VINDO DE VOLTA</p><h3>Login</h3>
+          <label>E-mail<input name="email" type="email" placeholder="Seu e-mail cadastrado" required></label>
+          <label>Senha<input name="password" type="password" placeholder="Sua senha" required></label>
+          <button class="btn primary" type="submit">Entrar ↗</button>
+          <button class="text-btn" id="forgot-password" type="button">Esqueci minha senha</button>
+        </form>
+      </div>
+      <p class="fine center">Versão demonstrativa: use dados fictícios. Nunca utilize senhas pessoais ou reais.</p>
+      <div class="session-box" id="session-box" hidden></div>
+    </section>
+
+    <section class="section admin" id="painel">
+      <p class="eyebrow">ÁREA DE GESTÃO</p>
+      <h2>Painel de gestão.</h2>
+      <p class="lead">Área restrita à equipe responsável. Na demonstração, os dados são fictícios.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Peça</th><th>Categoria</th><th>Tamanho</th><th>Quantidade</th><th>Status</th></tr></thead>
+          <tbody id="admin-table"><tr><td colspan="5" class="center">Nenhuma doação cadastrada.</td></tr></tbody>
+        </table>
+      </div>
+      <p class="fine">Painel de demonstração. Para a versão real, configure um usuário administrador no banco de dados.</p>
+    </section>
+  </main>
+
+  <footer><strong class="brand light">ELO<span>.</span></strong><p>Moda que conecta. Doe • Receba • Transforme.</p><small>Projeto demonstrativo de moda circular.</small></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "name": "elo-moda-que-conecta",
+  "version": "1.0.0",
+  "description": "ELO - Moda que conecta | Aplicativo demonstrativo",
+  "main": "main.cjs",
+  "author": "Projeto ELO",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "br.projetoelo.modaqueconecta",
+    "productName": "ELO - Moda que conecta",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "styles.css",
+      "app.js",
+      "assets/**/*",
+      "manifest.webmanifest",
+      "main.cjs"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ]
+    }
+  }
+}
